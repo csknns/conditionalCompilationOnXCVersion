@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        #if XCODE_VERSION_0900
+        print("compiles only on Xcode version 9")
+        #elseif XCODE_VERSION_1000
+        print("compiles only on Xcode version 10")
+        #endif
     }
 
     override func didReceiveMemoryWarning() {
