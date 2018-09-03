@@ -20,6 +20,23 @@ class ViewController: UIViewController {
         #endif
     }
 
+    func test() {
+        let activity = NSUserActivity(activityType: "com.activtiy.type")
+
+        activity.title = "Hello World"
+        activity.isEligibleForSearch = true
+        activity.isEligibleForHandoff = false
+
+        #if XCODE_VERSION_1000
+        if #available(iOS 12.0, *) {
+            activity.isEligibleForPrediction = true
+            activity.suggestedInvocationPhrase = "Say something"
+        }
+        #endif
+
+        print(activity)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
