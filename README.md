@@ -1,4 +1,4 @@
-# conditionalCompilationOnXCVersion
+# How to Conditionally compile Swift code based on the Xcode version
 
 [![Build Status](https://travis-ci.org/csknns/conditionalCompilationOnXCVersion.svg?branch=master)](https://travis-ci.org/csknns/conditionalCompilationOnXCVersion)
 
