@@ -6,4 +6,5 @@ language: swift
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
+  - xcodebuild -showBuildSettings -project conditionalCompilationOnXCVersion.xcodeproj -target conditionalCompilationOnXCVersion
   - xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
